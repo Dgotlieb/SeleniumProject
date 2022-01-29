@@ -1,6 +1,8 @@
 import Builder.Report;
 import Builder.Singleton;
+import Builder.XMLBuilder;
 import HomeScreen.HomeActions;
+import IntroAndLogin.Login;
 import PresentWindow.PresentScreen;
 import SendDetails.SendGiftDetails;
 import org.testng.annotations.AfterClass;
@@ -16,14 +18,14 @@ public class Run {
 
 
     }
-
-   @Test
-   public static void loginPage() throws Exception {
-       Login loginPage = new Login();
-       loginPage.login();
-
-
-   }
+//
+//   @Test
+//   public static void loginPage() throws Exception {
+//       Login loginPage = new Login();
+//       loginPage.login();
+//
+//
+//   }
 
     @Test
     public static void homeScreen() throws Exception {

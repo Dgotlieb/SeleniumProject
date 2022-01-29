@@ -14,16 +14,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class Report {
-    public static WebDriver driver;
 
 
-    static {
-        try {
-            driver = Singleton.getDriverInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
+
     public static ExtentReports extent;
     public static ExtentTest test;
 
@@ -39,8 +33,8 @@ public class Report {
     }
 
 
-    public static String takeScreenShot(String ImagesPath) {
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+    public static String takeScreenShot(String ImagesPath) throws Exception {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) Singleton.getDriverInstance();
         File screenShotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
         File destinationFile = new File(ImagesPath + ".png");
         try {
@@ -53,7 +47,7 @@ public class Report {
 
 
 
-    public static  void TakePicture(){
+    public static  void TakePicture() throws Exception {
         String timeNow = String.valueOf(System.currentTimeMillis());
    test.pass("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot(timeNow)).build());
    takeScreenShot(timeNow);
