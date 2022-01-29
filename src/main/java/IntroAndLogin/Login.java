@@ -66,8 +66,8 @@ private void signInButtons()  {
 
     }
 private void assertDeatlis() throws Exception {
-//    Assert.assertEquals(driver.findElement(By.id(FIRSTNAME)).getAttribute("value"), NAME);   ////Assert Name
-//    Assert.assertEquals(driver.findElement(By.id(EMAIL)).getAttribute("value") , MYEMAIL);   //// Assert Email
+   Assert.assertEquals(driver.findElement(By.id(FIRSTNAME)).getAttribute("value"), NAME);   ////Assert Name
+   Assert.assertEquals(driver.findElement(By.id(EMAIL)).getAttribute("value") , MYEMAIL);   //// Assert Email
 //    Assert.assertEquals(driver.findElement(By.id(PASS)).getAttribute("value") , MYPASS);    ////Assert Pass [dont work]
 //    Assert.assertEquals(driver.findElement(By.id(PASSREPEAT)).getAttribute("value") , MYPASSREP); ///Assert Repeat Pass [Dont Work]
     clickElement(By.className(SIGNIN));
