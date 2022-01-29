@@ -17,13 +17,13 @@ public class Run {
 
     }
 
-//    @Test
-//    public static void loginPage() throws Exception {
-//        Login loginPage = new Login();
-//        loginPage.login();
-//
-//
-//    }
+   @Test
+   public static void loginPage() throws Exception {
+       Login loginPage = new Login();
+       loginPage.login();
+
+
+   }
 
     @Test
     public static void homeScreen() throws Exception {
